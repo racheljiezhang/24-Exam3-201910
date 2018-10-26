@@ -2,8 +2,8 @@
 Exam 3, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October, 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Rachel Zhang.  October, 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -76,8 +76,29 @@ And this one for n=14:
 
     :type n: int
     """
+    wow = 0
+    for a in range(n):
+        for b in range(n - a):
+            print(' ', end='')
+        for d in range(wow +1):
+            if d + 1 < 10:
+                print(d + 1, end='')
+            if d + 1 >= 10:
+                print(d - 9, end='')
+        print(' ', end='')
+        for e in range(wow + 2):
+            print('*', end='')
+        print(' ', end ='')
+        for f in range(n-a -1 , -1,  -1):
+            if f + 1 < 10:
+                print(f + 1, end='')
+            if f + 1 >= 10:
+                print(f - 9, end='')
+        wow += 1
+        print()
+
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In your final solution for this problem,
