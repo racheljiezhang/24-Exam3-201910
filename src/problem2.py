@@ -2,9 +2,9 @@
 Exam 3, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2018.
+         their colleagues and Rachel Zhang.  October 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -89,8 +89,16 @@ def problem2(sequence):
     Type hints:
       :type sequence [list]
     """
+    wow = sequence[0]
+    for k in range(len(sequence)):
+        if sequence[k] < 0:
+            sequence[k] = -sequence[k]
+        if sequence[k] > wow:
+            wow = sequence[k]
+            bang = k
+    return bang
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
